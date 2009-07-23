@@ -1,4 +1,5 @@
 #!/bin/sh
+cd ~
 rm -rf ~/.dotfiles
 git clone git://github.com/rrm/dotfiles.git .dotfiles
 rm ~/.bashrc ~/.vimrc ~/.bash_prompt
