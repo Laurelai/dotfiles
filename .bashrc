@@ -102,5 +102,7 @@ export EDITOR=vim
 . ~/.bash_prompt
 set -o vi
 
-notifyme `ls /home |xargs`
-
+if [ -x /usr/bin/notifyme ]
+then
+	/usr/bin/notifyme `ls /home |xargs`
+fi
