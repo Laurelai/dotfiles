@@ -100,3 +100,7 @@ fi
 
 export EDITOR=vim
 . ~/.bash_prompt
+set -o vi
+
+notifyme `ls /home |xargs`
+
