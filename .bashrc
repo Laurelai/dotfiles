@@ -100,3 +100,5 @@ if [ -x /usr/bin/notifyme ]
 then
 	/usr/bin/notifyme `ls /home |xargs`
 fi
+
+export PATH=$PATH:~/bin
