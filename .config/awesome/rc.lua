@@ -12,7 +12,7 @@ require("debian.menu")
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
 -- theme_path = "/usr/share/awesome/themes/default/theme.lua"
-theme_path = "~/.config/awesome/themes/rm/theme.lua"
+theme_path = "/home/rm/.config/awesome/themes/rm/theme.lua"
 -- Uncommment this for a lighter theme
 -- theme_path = "/usr/share/awesome/themes/sky/theme.lua"
 
