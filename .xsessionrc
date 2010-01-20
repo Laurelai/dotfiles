@@ -1,3 +1,2 @@
-/usr/bin/nitrogen --restore &
 /usr/bin/xmodmap ~/.Xmodmap
 exec /usr/bin/awesome
