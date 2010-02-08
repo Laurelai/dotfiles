@@ -102,3 +102,10 @@ then
 fi
 
 export PATH=$PATH:~/bin
+
+if [ -f ~/.ssh-agent-cred ]; then
+	. ~/.ssh-agent-cred
+else
+	/usr/bin/ssh-agent > ~/.ssh-agent-cred
+	. ~/.ssh-agent-cred
+fi
