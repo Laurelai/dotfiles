@@ -93,6 +93,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 export EDITOR=vim
+export JAVA_HOME=/usr
 . ~/.bash_prompt
 set -o vi
 
