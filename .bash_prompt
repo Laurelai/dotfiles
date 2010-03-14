@@ -1,35 +1,24 @@
-function elite
-{
-
-local GRAY="\[\033[1;30m\]"
+function proml {
+local       BLUE="\[\033[0;34m\]"
+local        PURPLE="\[\033[0;35m\]"
+local  LIGHT_PURPLE="\[\033[1;35m\]"
+local      WHITE="\[\033[1;37m\]"
 local LIGHT_GRAY="\[\033[0;37m\]"
-local CYAN="\[\033[0;35m\]"
-local LIGHT_CYAN="\[\033[1;34m\]"
-local NO_COLOUR="\[\033[0m\]"
-
 case $TERM in
-    xterm*|rxvt*)
-        local TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+    xterm*)
+        TITLEBAR='\[\033]0;\u@\h:\w\007\]'
         ;;
     *)
-        local TITLEBAR=""
+        TITLEBAR=""
         ;;
 esac
 
-local temp=$(tty)
-local GRAD1=${temp:5}
-PS1="$TITLEBAR\
-$GRAY-$CYAN-$LIGHT_CYAN(\
-$CYAN\u$GRAY@$CYAN\h\
-$LIGHT_CYAN)$CYAN-$LIGHT_CYAN(\
-$CYAN\#$GRAY/$CYAN$GRAD1\
-$LIGHT_CYAN)$CYAN-$LIGHT_CYAN(\
-$CYAN\$(date +%H%M)$GRAY/$CYAN\$(date +%d-%b-%y)\
-$LIGHT_CYAN)$CYAN-$GRAY-\
-$LIGHT_GRAY\n\
-$GRAY-$CYAN-$LIGHT_CYAN(\
-$CYAN\$$GRAY:$CYAN\w\
-$LIGHT_CYAN)$CYAN-$GRAY-$LIGHT_GRAY " 
-PS2="$LIGHT_CYAN-$CYAN-$GRAY-$NO_COLOUR "
+PS1="${TITLEBAR}\
+$BLUE[$PURPLE\$(date +%H%M)$BLUE]\
+$BLUE[$LIGHT_PURPLE\u@\h:\w$BLUE]\
+$WHITE% $LIGHT_PURPLE "
+PS2='> '
+PS4='+ '
 }
-elite
+
+proml
