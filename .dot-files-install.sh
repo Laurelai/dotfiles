@@ -13,3 +13,4 @@ ln -s ~/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/.bashrc ~/.profile
 ln -s ~/.dotfiles/.bash_aliases ~/.bash_aliases
 ln -s ~/.dotfiles/.vim ~/.vim
+ln -s ~/.dotfiles/.screenrc ~/.screenrc
