@@ -1,4 +1,4 @@
 # to reload: ctrl-meta :source ~/.screenrc
 # uncomment for custom meta-key
 #escape ^Ww
-caption always "%{Mk}[%{Wk}%n%{Mk}]%{Mk}[%{Bk}%H%{Mk}][%{Bk}%t%{Mk}][%{Ck}%c - %d.%m.%Y%{Mk}]%83=%{Mk}[%{Kk}Load: %l%{wk}%{Mk}]"
+caption always "%{Mk}[%{Wk}%n%{Mk}]%{Mk}[%{Bk}%H%{Mk}][%{Bk}%t%{Mk}][%{Ck}%c - %d.%m.%Y%{Mk}]%83=%{Mk}[%{wk}Load: %l%{Mk}]"
