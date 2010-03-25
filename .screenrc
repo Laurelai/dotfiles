@@ -13,3 +13,7 @@ screen -t repl 0
 screen -t test 1
 screen -t edit1 2
 screen -t edit2 3
+screen -t irc 4 irssi
+screen -t bnc 5 ssh medra01@bnc.macpwnd.com
+screen -t pair 6 ssh pair@pair.atgcloud.info 
+screen -t scratch 7
