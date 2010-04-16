@@ -13,3 +13,6 @@ alias show-est="lsof -iTCP -sTCP:ESTABLISHED | awk '{print $1}' | sort -u"
 # NOTE: pass options to head
 alias apt-random='apt-cache search . | rl | head'
 alias apt-fortune='apt-random -1'
+alias push='pushd'
+alias pop='popd'
+alias lsd='dirs'
