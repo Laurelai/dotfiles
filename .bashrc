@@ -11,14 +11,7 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -94,13 +87,7 @@ fi
 
 export EDITOR=vim
 export JAVA_HOME=/usr
-. ~/.bash_prompt
 set -o vi
-
-#if [ -x /usr/bin/notifyme ]
-#then
-#	/usr/bin/notifyme `ls /home |xargs`
-#fi
 
 export PATH=$PATH:~/bin
 
@@ -110,3 +97,6 @@ else
 	/usr/bin/ssh-agent > ~/.ssh-agent-cred
 	. ~/.ssh-agent-cred
 fi
+
+# bash prompt
+PS1="[\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]]\$ "
