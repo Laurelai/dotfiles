@@ -91,8 +91,12 @@ set -o vi
 
 export PATH=$PATH:~/bin
 
-#/usr/bin/ssh-agent > ~/.ssh-agent-cred
-#. ~/.ssh-agent-cred
+if [ -f ~/.ssh-agent-cred ]; then
+	. ~/.ssh-agent-cred
+else
+	/usr/bin/ssh-agent > ~/.ssh-agent-cred
+	. ~/.ssh-agent-cred
+fi
 
 # bash prompt
 PS1="[\[\033[35;1m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[36m\]\h:\[\033[35;1m\]\w\[\033[m\]]\$ "
