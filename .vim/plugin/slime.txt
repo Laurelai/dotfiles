@@ -1,0 +1,13 @@
+url: http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/
+plugin: http://s3.amazonaws.com/mps/slime.vim
+
+Thankfully, I can help with the automation. Get slime.vim and put it in ~/.vim/plugin/ .
+
+A few notes:
+
+the magic key is C-c C-c (like Slime, surprise!)
+the first time, you’ll be prompted for the “session name” and the “window name”
+subsequent times will be automated
+you can reprompt for “session name” and “window name” with C-c v
+by default, C-c C-c will select the current paragraph and copy-paste it
+but you can make your own selection first, and send it over with C-c C-c
