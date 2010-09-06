@@ -100,3 +100,6 @@ fi
 
 # bash prompt
 PS1="[\[\033[35;1m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[36m\]\h:\[\033[35;1m\]\w\[\033[m\]]\$ "
+
+# load shell functions
+source ~/.functions

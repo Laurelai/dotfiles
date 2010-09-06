@@ -1,0 +1,4 @@
+function 4get ()
+{
+	curl $1 | grep -i "File<a href" | awk -F '<a href="' '{print $4}' | awk -F '" ' '{print $1}' | xargs wget
+}
