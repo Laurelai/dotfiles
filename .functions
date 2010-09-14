@@ -2,3 +2,14 @@ function 4get ()
 {
 	curl $1 | grep -i "File<a href" | awk -F '<a href="' '{print $4}' | awk -F '" ' '{print $1}' | xargs wget
 }
+
+function browse ()
+{
+	/usr/bin/chromium-browser --user-data-dir=$HOME/.config/chromium/$1
+}
+
+function browse-tmp ()
+{
+	/usr/bin/chromium-browser --temp-profile
+}
+
