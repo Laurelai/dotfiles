@@ -6,6 +6,7 @@ fi
 cd ~
 rm -rf ~/.dotfiles
 git clone git://github.com/rrm/dotfiles.git .dotfiles
+mkdir -p ~/.config
 rm -f ~/.vimrc ~/.bashrc ~/.profile ~/.bash_aliases ~/.vim ~/.screenrc ~/.functions ~/.xsession
 rm -rf ~/.config/awesome
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
