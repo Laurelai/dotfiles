@@ -1,0 +1,3 @@
+#!/bin/sh
+pkill -9 syndaemon
+/usr/bin/synclient TouchpadOff=1
