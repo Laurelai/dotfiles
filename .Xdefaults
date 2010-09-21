@@ -1,0 +1,10 @@
+# urxvt
+URxvt.foreground: pink
+URxvt.cursorColor: purple
+URxvt.underlineColor: lightblue
+URxvt.font:		xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt.transparent: true
+URxvt.shading: 35 
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/chromium-browser
+URxvt.matcher.button:   1 
