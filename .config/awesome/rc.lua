@@ -15,7 +15,7 @@ require("debian.menu")
 beautiful.init("/home/lune/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt -tr +sb -sh 40 -fg pink"
+terminal = "urxvt -tr +sb -sh 40 -fg pink -fn 'xft:Bitstream Vera Sans Mono:pixelsize=12'"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
