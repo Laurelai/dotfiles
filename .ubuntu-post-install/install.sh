@@ -24,3 +24,9 @@ chmod 755 /usr/bin/synstop
 
 # special user session for gdm
 cp Xsessions.desktop /usr/share/xsessions/Xsessions.desktop
+
+# sshfs mounts
+gpg fstab-sshfs.gpg
+cp /etc/fstab /etc/fstab.ubuntu
+cat fstab-sshfs >> /etc/fstab
+rm fstab-sshfs
