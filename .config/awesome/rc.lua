@@ -15,7 +15,7 @@ require("debian.menu")
 beautiful.init("/home/lune/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "aterm -tr +sb -sh 40 -fg pink"
+terminal = "aterm -tr +sb -sh 40 -fg pink -fn -schumacher-clean-bold-*-normal-*-13-*-*-*-*-80-*-*"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
