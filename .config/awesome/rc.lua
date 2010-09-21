@@ -12,10 +12,10 @@ require("debian.menu")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/lune/.config/awesome/themes/default/theme.lua")
+beautiful.init("/home/lune/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "aterm -tr +sb -sh 40 -fg pink -fn -schumacher-clean-bold-*-normal-*-13-*-*-*-*-80-*-*"
+terminal = "urxvt -tr +sb -sh 40 -fg pink"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -49,7 +49,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ 'comm', 'read', 'music', 'float', 'misc' }, s, layouts[1])
 end
 -- }}}
 
