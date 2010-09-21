@@ -10,9 +10,11 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
+local home = os.getenv("HOME")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/lune/.config/awesome/themes/zenburn/theme.lua")
+beautiful.init(home .. "/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt +sb"

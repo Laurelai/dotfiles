@@ -7,8 +7,10 @@
 --  * http://awesome.naquadah.org/wiki/Nice_Icons
 
 -- {{{ Main
+local home = os.getenv("HOME")
+
 theme = {}
-theme.wallpaper_cmd = { "awsetbg /home/lune/.wallpaper" }
+theme.wallpaper_cmd = { "awsetbg ".. home .. "/.wallpaper" }
 
 -- }}}
 
@@ -80,7 +82,7 @@ theme.taglist_squares_unsel = "/usr/share/awesome/themes/zenburn/taglist/squarez
 -- {{{ Misc
 theme.awesome_icon           = "/usr/share/awesome/themes/zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = "/usr/share/awesome/themes/default/submenu.png"
-theme.tasklist_floating_icon = "/usr/share/awesome/themes/default/tasklist/floatingw.png"
+theme.tasklist_floating_icon = home .. "/.config/awesome/themes/zenburn/tasklist/floatingw.png"
 -- }}}
 
 -- {{{ Layout
