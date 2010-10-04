@@ -171,6 +171,7 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control"	  }, "x", function () awful.util.spawn("gnome-screensaver-command -l") end),
     awful.key({ modkey, "Control"	  }, "b", function () awful.util.spawn("chromium-browser --temp-profile") end),
+    awful.key({ modkey, "Control"	  }, "n", function () awful.util.spawn("nautilus --no-desktop") end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
