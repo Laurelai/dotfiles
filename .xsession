@@ -1,6 +1,5 @@
 #!/bin/sh
 gnome-screensaver &
-nautilus --no-desktop &
 chromium-browser --user-data-dir=/home/lune/.config/chromium/lune &
 audacious &
 skype &
