@@ -8,10 +8,6 @@ cat isight-rc.local >> /tmp/rc.local
 mv /tmp/rc.local /etc/rc.local
 chmod 755 /etc/rc.local
 
-# install sources.list
-cp /etc/apt/sources.list /etc/apt/sources.list.ubuntu
-cp sources.list /etc/apt/sources.list
-
 # install post-installation packages
 dpkg -i desktop-post-install_1.0_all.deb
 aptitude -fy --safe-resolver install
