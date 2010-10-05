@@ -20,3 +20,5 @@ alias pop='popd'
 alias lsd='dirs'
 alias screen='/usr/bin/byobu'
 alias torrent='transmissioncli -D -u 100 -w `pwd`'
+alias untar='tar -xzvf'
+alias untgz=untar
