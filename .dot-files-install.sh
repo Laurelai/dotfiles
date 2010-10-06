@@ -19,4 +19,5 @@ ln -s ~/.dotfiles/.screenrc ~/.screenrc
 ln -s ~/.dotfiles/.functions ~/.functions
 ln -s ~/.dotfiles/.xsession ~/.xsession
 ln -s ~/.dotfiles/.Xdefaults ~/.Xdefaults
+ln -s ~/.dotfiles/.byobu ~/.byobu
 ln -s ~/.dotfiles/.config/awesome ~/.config/awesome
