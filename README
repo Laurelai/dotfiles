@@ -1,3 +1,3 @@
 about: my dotfiles
-requirements: sudo apt-get install curl git-core
+WARNING: INSTALLATION IS A DESTRUCTIVE OPERATION THIS IS YOUR ONLY WARNING
 install: curl http://github.com/rrm/dotfiles/raw/master/install.sh | /bin/sh
