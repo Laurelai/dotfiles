@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# start
+echo "Beginning installation..."
+
 # install post-installation packages
 ./packages.sh
 
@@ -26,3 +29,7 @@ gpg fstab-sshfs.gpg
 cp /etc/fstab /etc/fstab.ubuntu
 cat fstab-sshfs >> /etc/fstab
 rm fstab-sshfs
+
+# complete
+echo "Installation complete: You should reboot your system"
+
