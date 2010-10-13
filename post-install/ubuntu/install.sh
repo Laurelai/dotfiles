@@ -11,6 +11,7 @@ grep -v "exit 0" /etc/rc.local > /tmp/rc.local
 cat isight-rc.local >> /tmp/rc.local
 mv /tmp/rc.local /etc/rc.local
 chmod 755 /etc/rc.local
+source /etc/rc.local
 
 # install syndaemon userland control
 cp synstart /usr/bin/synstart
