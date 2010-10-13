@@ -13,7 +13,7 @@ Package: desktop-post-install
 Version: 1.0 
 Maintainer: rm <rm@5ess.net>
 # Pre-Depends: <comma-separated list of packages>
-Depends: equivs,isight-firmware-tools,ufw,gufw,skype,ubuntu-restricted-extras,build-essential,cheese,compiz-fusion-plugins-extra,emerald,fusion-icon,lynx,ngrep,nmap,strace,vim,wine,playonlinux,simple-ccsm,virtualbox-ose,curl,dput,ubuntu-artwork,breathe-icon-theme,community-themes,gnome-themes-selected,gnome-themes-ubuntu,gnome-art,gnome-theme-gilouche,gnome-themes-extras,gnome-themes-more,lmms,lmms-vst,proxychains,sshfs,awesome,audacious,vlc,fische,electricsheep,rxvt-unicode,xserver-xephyr,rlwrap,dvtm,dtach
+Depends: equivs,dput,isight-firmware-tools,ufw,gufw,skype,cheese,ngrep,nmap,vim,wine,playonlinux,simple-ccsm,virtualbox-ose,curl,lmms,lmms-vst,proxychains,sshfs,awesome,audacious,vlc,fische,electricsheep,rxvt-unicode,xserver-xephyr,rlwrap,dvtm,dtach,buzztard,buzztard-bsl,csound,easytag,audacity,lame
 # Recommends: <comma-separated list of packages>
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
