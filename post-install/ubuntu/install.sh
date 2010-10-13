@@ -1,9 +1,7 @@
 #!/bin/sh
 
 # install post-installation packages
-apt-get -y install aptitude
-dpkg -i desktop-post-install_1.0_all.deb
-aptitude -fy --safe-resolver install
+./packages.sh
 
 # configure apple isight
 cp AppleUSBVideoSupport /root
