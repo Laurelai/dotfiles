@@ -8,7 +8,7 @@ echo "Base Packages"
 $APT git-core curl tig isight-firmware-tools ufw ngrep nmap vim sshfs proxychains dvtm dtach rlwrap
 
 echo "Desktop packages"
-$APT gufw skype chromium-browser cheese simple-ccsm awesome audacious vlc electricsheep rxvt-unicode xserver-xephyr
+$APT gufw skype chromium-browser cheese simple-ccsm awesome audacious vlc electricsheep rxvt-unicode xserver-xephyr feh
 
 echo "Virtualization"
 $APT virtualbox-ose

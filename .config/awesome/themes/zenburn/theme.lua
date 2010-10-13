@@ -10,7 +10,7 @@
 local home = os.getenv("HOME")
 
 theme = {}
-theme.wallpaper_cmd = { "awsetbg ".. home .. "/.wallpaper" }
+theme.wallpaper_cmd = { "feh --bg-fill ".. home .. "/.wallpaper" }
 
 -- }}}
 
