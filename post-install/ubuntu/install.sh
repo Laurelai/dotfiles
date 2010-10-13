@@ -26,9 +26,13 @@ chmod 755 /usr/bin/synstop
 
 # sshfs mounts
 gpg fstab-sshfs.gpg
+gpg fstab-mount-points.sh.gpg
+chmod 755 fstab-mount-points.sh
+./fstab-mount-points.sh
+rm -f fstab-mount-points.sh
 cp /etc/fstab /etc/fstab.ubuntu
 cat fstab-sshfs >> /etc/fstab
-rm fstab-sshfs
+rm -f fstab-sshfs
 
 # complete
 echo "Installation complete: You should reboot your system"
