@@ -18,9 +18,6 @@ cp synstop /usr/bin/synstop
 chmod 755 /usr/bin/synstart
 chmod 755 /usr/bin/synstop
 
-# special user session for gdm
-cp Xsessions.desktop /usr/share/xsessions/Xsessions.desktop
-
 # sshfs mounts
 gpg fstab-sshfs.gpg
 cp /etc/fstab /etc/fstab.ubuntu
