@@ -3,6 +3,9 @@
 # install post-installation packages
 ./packages.sh
 
+# enable ufw
+ufw enable
+
 # configure apple isight
 cp AppleUSBVideoSupport /root
 cp /etc/rc.local /etc/rc.local.ubuntu
