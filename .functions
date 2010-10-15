@@ -23,8 +23,9 @@ function tgzd ()
 	tar -czvf `basename$1`.`date +%F`.tgz $1
 }
 
-function setwall ()
+function wallpaper ()
 {
 	rm -f ~/.wallpaper
 	ln -s `pwd`/$1 ~/.wallpaper
+	feh --bg-fill ~/.wallpaper
 }
