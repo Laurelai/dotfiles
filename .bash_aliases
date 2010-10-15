@@ -24,3 +24,4 @@ alias torrent='transmissioncli -D -u 100 -w `pwd`'
 alias untar='tar -xzvf'
 alias untgz=untar
 alias setbg='feh --bg-fill'
+alias wallpaper='setbg ~/.wallpaper'
