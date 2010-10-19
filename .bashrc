@@ -87,7 +87,7 @@ fi
 
 export EDITOR=vim
 export JAVA_HOME=/usr
-set -o vi
+#set -o vi
 
 export PATH=$PATH:~/bin
 
