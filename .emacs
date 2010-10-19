@@ -6,8 +6,8 @@
 ; require libraries
 (require 'cl)		; some common lisp functions
 (require 'tramp)
-;(require 'ruby-mode)
-;(require 'ruby-electric)
+(require 'ruby-mode)
+(require 'ruby-electric)
 
 ; setup slime 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
