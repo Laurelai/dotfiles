@@ -2,25 +2,16 @@
 ; (ielm): inferior emacs lisp mode (repl)
 ; (eshell): can also act as a repl
 ; (lisp-interaction-mode): make the current buffer act as a repl
-;
 
 ; require libraries
 (require 'cl)		; some common lisp functions
 (require 'tramp)
-(require 'erc)
-(require 'rcirc)
 (require 'thingatpt)
 (require 'ruby-mode)
 (require 'ruby-electric)
 
-(add-to-list 'load-path "/home/rm/emacs-extensions/muse/lisp")
-(require 'muse-mode)
-(require 'muse-html)
-(require 'muse-latex)
-(require 'muse-project)
-
 ; find slime
-(add-to-list 'load-path "/home/rm/emacs-extensions/slime")
+(add-to-list 'load-path "~/.dotfiles/.emacs-ext/slime")
 (require 'slime)
 
 ; disable splash screen at startup
@@ -58,24 +49,6 @@
 (require 'color-theme)
 ;(color-theme-initialize)
 (color-theme-matrix)
-
-; join channels on erc start
-(defun erc-setup ()
-  (add-hook
-   'window-configuration-change-hook 
-   '(lambda ()
-      (setq erc-fill-column (- (window-width) 2)))))
-
-(defun erc-maybe ()
- "connect to IRC"
- (interactive)
- (when (y-or-n-p "IRC? ")
-  (erc-setup)
-  (setq erc-autojoin-channels-alist
-   '(("freenode.net" "#chicken" "#lisp" "#emacs")))
-  (erc :server "irc.freenode.net" :port 6667 :nick "glogic"))
- (sit-for 20))
-;(erc-maybe)
 
 (defun at-with-tag (tag)
   (interactive)
@@ -144,8 +117,6 @@
   (split-window-horizontally)
   (switch-to-buffer "#chicken")
   (other-window 2)
-  (switch-to-buffer "irc.freenode.net:6667")
-  (split-window-horizontally)
   (switch-to-buffer "#emacs")
   (set-frame-parameter nil 'alpha 85)
   (menu-bar-mode 0)
