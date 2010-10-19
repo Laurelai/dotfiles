@@ -20,4 +20,4 @@ echo "Recording Studio"
 $APT lmms lmms-vst buzztard buzztard-bsl csound easytag audacity lame
 
 echo "Common Lisp"
-$APT sbcl gcl
+$APT sbcl
