@@ -11,7 +11,6 @@
 (require 'ruby-electric)
 
 ; find slime
-;(add-to-list 'load-path "~/.dotfiles/.emacs-ext/slime")
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 (require 'slime)
 
