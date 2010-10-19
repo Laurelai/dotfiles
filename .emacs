@@ -17,7 +17,7 @@
   "setup default slime interface"
   (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
   (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
-  (slime-setup))
+  (slime-setup '(slime-repl)))
 (setup-slime)
 
 ; disable splash screen at startup
