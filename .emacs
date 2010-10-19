@@ -6,26 +6,12 @@
 ; require libraries
 (require 'cl)		; some common lisp functions
 (require 'tramp)
-(require 'thingatpt)
-(require 'ruby-mode)
-(require 'ruby-electric)
+;(require 'ruby-mode)
+;(require 'ruby-electric)
 
-; find slime
+; setup slime 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 (require 'slime)
-
-; disable splash screen at startup
-(setq inhibit-splash-screen t)
-; enable desktop save mode for session restoration
-;(desktop-save-mode 1)
-; turn on auto-indent
-(setq indent-line-function 'indent-relative-maybe)
-
-; configure timeclock
-(setq timeclock-ask-before-exiting t)
-
-; startup winner-mode
-; (winner-mode 1)
 
 (defun setup-slime ()
   "setup default slime interface"
@@ -33,6 +19,15 @@
   (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
   (slime-setup))
 (setup-slime)
+
+; disable splash screen at startup
+(setq inhibit-splash-screen t)
+
+; turn on auto-indent
+(setq indent-line-function 'indent-relative-maybe)
+
+; configure timeclock
+(setq timeclock-ask-before-exiting t)
 
 ; setup abbreviations
 ; http://www.slac.stanford.edu/comp/unix/gnu-info/elisp_33.html
@@ -47,8 +42,8 @@
 
 ; select a color theme
 (require 'color-theme)
-;(color-theme-initialize)
-(color-theme-matrix)
+(color-theme-initialize)
+(color-theme-taming-mr-arneson)
 
 (defun at-with-tag (tag)
   (interactive)
@@ -89,40 +84,6 @@
   (interactive)
   (switch-to-buffer (get-buffer-create "*scratch*"))
   (lisp-interaction-mode))  
-
-(defun window-setup ()
-  (interactive)
-  ;; full-screen frame settings
-  (setq initial-frame-alist '((top . 0) (left . 0) (width . 360) (height . 85)))
-  (setq default-frame-alist '((top . 0) (left . 0) (width . 360) (height . 85)))
-  (setq special-display-frame-alist '((top . 0) (left . 0) (width . 360) (height . 85)))
-  (switch-to-buffer-other-frame (buffer-name))
-  ;; create windows as needed
-  (delete-other-windows) 
-  (split-window-vertically)
-  (switch-to-buffer "*scratch*")
-  (split-window-horizontally) 
-  (other-window 1)
-  (find-file "~/.emacs")
-  (split-window-horizontally) 
-  (switch-to-buffer "*Messages*")
-  (other-window 2)
-  (split-window-horizontally)
-  (switch-to-buffer "*scratch*")
-  (split-window-horizontally)
-  (switch-to-buffer "*scratch*")
-  (other-window 2)
-  (split-window-horizontally)
-  (switch-to-buffer "#lisp")
-  (split-window-horizontally)
-  (switch-to-buffer "#chicken")
-  (other-window 2)
-  (switch-to-buffer "#emacs")
-  (set-frame-parameter nil 'alpha 85)
-  (menu-bar-mode 0)
-  (tool-bar-mode 0)
-  (color-theme-blue-sea))
-;(window-setup)
 
 ; ruby-mode
 (defun ruby-eval-buffer () (interactive)
