@@ -30,7 +30,7 @@ fi
 echo "creating config directory..."
 mkdir -p ~/.config
 
-FILES=".vimrc .emacs .bashrc .profile .bash_aliases .vim .gitconfig .screenrc .functions .xsession .Xdefaults .byobu .config/awesome"
+FILES=".vimrc .emacs .sbclrc .bashrc .profile .bash_aliases .vim .gitconfig .screenrc .functions .xsession .Xdefaults .byobu .config/awesome"
 for i in $FILES; do
 	echo installing: ~/.dotfiles/$i ~/$i
 	rm -rf ~/$i
