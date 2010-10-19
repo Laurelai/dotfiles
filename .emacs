@@ -70,15 +70,6 @@
   (interactive)
   (interactive-url-search "http://www.google.com/search?q="))
 
-(defun google-at-point ()
-  "search google for term at current cursor position"
-  (interactive)
-  (url-search "http://www.google.com/search?q=" (thing-at-point 'word)))
-
-(defun clone-emacs ()
-  (interactive)
-    (start-process "emacs-clone" "emacs-clone" "/Applications/Emacs.app/Contents/MacOS/Emacs" "-Q"))
-
 (defun create-scratch-buffer nil
   "Create a scratch buffer."
   (interactive)
@@ -143,13 +134,3 @@
 (global-set-key [(control -)] 'indent-sexp)
 (global-set-key [(control =)] 'indent-region)
 (global-set-key [(control \\)] 'indent-entire-file)
-
-(defun reset-special-buffers ()
-  "set all special buffer's to nil"
-  (setq same-window-buffer-names '())
-  (setq special-display-buffer-names '())
-  (setq same-window-regexps '())
-  (setq special-display-regexps '()))
-(reset-special-buffers)
-; send all special buffers to the current window
-(setq same-window-regexps '("*.*"))
