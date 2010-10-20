@@ -19,5 +19,5 @@ $APT wine playonlinux
 echo "Recording Studio"
 $APT lmms lmms-vst buzztard buzztard-bsl csound easytag audacity lame
 
-echo "Common Lisp"
-$APT sbcl
+echo "Development"
+$APT  build-essential sbcl gcl bnfc antlr3 flex bison ruby irb rake rdoc rubygems
