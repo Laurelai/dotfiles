@@ -1,7 +1,8 @@
 source /usr/share/byobu/keybindings/common
-escape ^``
-register r "^`:source $HOME/.byobu/profile^M"		#     | Goes with F5 definition
-register t "^`A^aa^k^h"					#     | Goes with the F8 definition
-register d "^`:source /usr/share/byobu/keybindings/screen-escape-keys^M"
-register r "^`:source $HOME/.byobu/profile^M"
-register e "^`:source /usr/share/byobu/keybindings/f-keys^M"
+escape ^Bb
+register r "^b:source $HOME/.byobu/profile^M"		#     | Goes with F5 definition
+register t "^bA^aa^k^h"					#     | Goes with the F8 definition
+register s "^b[g G$>^h"					# Goes with ^a~ definition
+register d "^b:source $BYOBU_PREFIX/share/byobu/keybindings/screen-escape-keys^M"
+register r "^b:source $HOME/.byobu/profile^M"
+register e "^b:source $BYOBU_PREFIX/share/byobu/keybindings/f-keys^M"

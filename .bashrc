@@ -85,9 +85,9 @@ fi
 #    . /etc/bash_completion
 #fi
 
-export EDITOR=vim
+export EDITOR=emacs
 export JAVA_HOME=/usr
-set -o vi
+#set -o vi
 
 export PATH=$PATH:~/bin
 
