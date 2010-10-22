@@ -34,9 +34,9 @@
 (setq password-cache-expiry nil)
 
 ; select a color theme
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-taming-mr-arneson)
+; (require 'color-theme)
+; (color-theme-initialize)
+; (color-theme-taming-mr-arneson)
 
 ;C-c C-j : switch to line mode
 ;C-c C-k : switch to char mode
