@@ -7,15 +7,17 @@
 (require 'cl)		; some common lisp functions
 (require 'tramp)
 
+; load slime
 ; setup slime 
 (let ((slime-helper-file (expand-file-name "~/quicklisp/slime-helper.el")))
   (if (file-exists-p slime-helper-file)
-    (begin
-      (load slime-helper-file)
-      (require 'slime)
-      (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
-      (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
-      (slime-setup '(slime-repl)))))
+      (progn
+	(load slime-helper-file)
+	(require 'slime)
+	(add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
+	(add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
+	(slime-setup '(slime-repl)))))
+
 
 ; disable splash screen at startup
 (setq inhibit-splash-screen t)
