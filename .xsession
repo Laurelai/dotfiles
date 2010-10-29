@@ -1,6 +1,6 @@
 #!/bin/sh
 gnome-screensaver &
-chromium-browser --user-data-dir=/home/lune/.config/chromium/lune &
+google-chrome &
 audacious &
 skype &
 gnome-volume-control-applet &
