@@ -8,13 +8,13 @@ echo "Base Packages"
 $APT git-core curl tig isight-firmware-tools ufw ngrep nmap vim sshfs proxychains dvtm dtach rlwrap emacs emacs-goodies-el ruby-elisp
 
 echo "Desktop packages"
-$APT gufw skype chromium-browser cheese simple-ccsm awesome audacious vlc electricsheep rxvt-unicode xserver-xephyr feh flpsed
+$APT gufw skype chromium-browser cheese simple-ccsm awesome audacious vlc electricsheep rxvt-unicode xserver-xephyr feh flpsed google-chrome
 
 echo "Virtualization"
 $APT virtualbox-ose
 
 echo "Gaming packages"
-$APT wine playonlinux
+$APT wine1.3 winetricks playonlinux
 
 echo "Recording Studio"
 $APT lmms lmms-vst buzztard buzztard-bsl csound easytag audacity lame

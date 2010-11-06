@@ -3,6 +3,10 @@
 # start
 echo "Beginning installation..."
 
+# setup sources
+cp sources.list.d/* /etc/apt/sources.list.d
+apt-get update
+
 # install post-installation packages
 ./packages.sh
 
