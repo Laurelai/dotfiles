@@ -1,6 +1,6 @@
 #!/bin/sh
 gnome-screensaver &
-google-chrome &
+#google-chrome &
 audacious &
 skype &
 gnome-volume-control-applet &
