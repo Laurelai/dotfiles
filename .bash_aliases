@@ -25,3 +25,4 @@ alias untar='tar -xzvf'
 alias untgz=untar
 alias setbg='feh --bg-fill'
 alias emacs='emacs -nw'
+alias js='rlwrap nodejs-repl'

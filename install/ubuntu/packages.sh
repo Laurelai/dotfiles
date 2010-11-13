@@ -20,4 +20,4 @@ echo "Recording Studio"
 $APT lmms lmms-vst buzztard buzztard-bsl csound easytag audacity lame
 
 echo "Development"
-$APT  build-essential sbcl gcl ecl bnfc antlr3 flex bison ruby irb rake rdoc rubygems lemon uthash-dev gperf
+$APT  build-essential sbcl gcl ecl bnfc antlr3 flex bison ruby irb rake rdoc rubygems lemon uthash-dev gperf nodejs coffeescript
