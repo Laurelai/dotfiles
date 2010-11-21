@@ -30,12 +30,6 @@ mv /tmp/rc.local /etc/rc.local
 chmod 755 /etc/rc.local
 source /etc/rc.local
 
-# install syndaemon userland control
-cp synstart /usr/bin/synstart
-cp synstop /usr/bin/synstop
-chmod 755 /usr/bin/synstart
-chmod 755 /usr/bin/synstop
-
 # install skype on amd64
 apt-get install ia32-libs ia32-libs-gtk libasound2-plugins libqt4-core lib32v4l-0 
 wget -O skype-install.deb http://www.skype.com/go/getskype-linux-beta-deb 

@@ -1,4 +1,0 @@
-#!/bin/sh
-pkill -9 syndaemon
-/usr/bin/syndaemon -i 2 -k &
-/usr/bin/synclient TouchpadOff=0
