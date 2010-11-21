@@ -35,3 +35,8 @@ cp synstart /usr/bin/synstart
 cp synstop /usr/bin/synstop
 chmod 755 /usr/bin/synstart
 chmod 755 /usr/bin/synstop
+
+# install skype on amd64
+apt-get install install ia32-libs ia32-libs-gtk libqt4-core libqt4-gui
+wget -O skype-install.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+dpkg -i skype-install.deb
