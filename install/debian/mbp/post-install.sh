@@ -29,3 +29,9 @@ cat isight-rc.local >> /tmp/rc.local
 mv /tmp/rc.local /etc/rc.local
 chmod 755 /etc/rc.local
 source /etc/rc.local
+
+# install syndaemon userland control
+cp synstart /usr/bin/synstart
+cp synstop /usr/bin/synstop
+chmod 755 /usr/bin/synstart
+chmod 755 /usr/bin/synstop
