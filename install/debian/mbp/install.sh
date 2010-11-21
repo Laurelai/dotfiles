@@ -16,7 +16,7 @@ echo "blacklist snd-pcsp" >> /etc/modprobe.d/alsa-base-blacklist
 # nvidia drivers
 apt-get install module-assistant nvidia-kernel-common
 m-a auto-install nvidia-kernel${VERSION}-source
-apt-get install nvidia-glx${VERSION}
+apt-get install nvidia-glx${VERSION} nvidia-glx-ia32
 apt-get install nvidia-xconfig
 nvidia-xconfig
 
