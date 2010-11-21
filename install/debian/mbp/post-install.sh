@@ -19,3 +19,12 @@ m-a auto-install nvidia-kernel${VERSION}-source
 apt-get install nvidia-glx${VERSION}
 apt-get install nvidia-xconfig
 nvidia-xconfig
+
+# configure apple isight
+cp AppleUSBVideoSupport /root
+cp /etc/rc.local /etc/rc.local.ubuntu
+grep -v "exit 0" /etc/rc.local > /tmp/rc.local
+cat isight-rc.local >> /tmp/rc.local
+mv /tmp/rc.local /etc/rc.local
+chmod 755 /etc/rc.local
+source /etc/rc.local
