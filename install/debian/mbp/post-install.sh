@@ -21,6 +21,7 @@ apt-get install nvidia-xconfig
 nvidia-xconfig
 
 # configure apple isight
+apt-get install isight-firmware-tools
 cp AppleUSBVideoSupport /root
 cp /etc/rc.local /etc/rc.local.ubuntu
 grep -v "exit 0" /etc/rc.local > /tmp/rc.local
