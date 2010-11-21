@@ -40,3 +40,5 @@ chmod 755 /usr/bin/synstop
 apt-get install install ia32-libs ia32-libs-gtk libqt4-core libqt4-gui
 wget -O skype-install.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 dpkg -i skype-install.deb
+chmod a-r /usr/lib32/libpulse{-simple.so.0.0.2,.so.0.8.0,common-0.9.15.so}
+
