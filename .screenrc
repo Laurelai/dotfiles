@@ -1,3 +1,0 @@
-# to reload: ctrl-meta :source ~/.screenrc
-# uncomment for custom meta-key
-escape ^``

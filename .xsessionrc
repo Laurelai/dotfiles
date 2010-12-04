@@ -1,3 +1,0 @@
-/usr/bin/xscreensaver &
-/usr/bin/xmodmap ~/.Xmodmap
-exec /usr/bin/awesome
