@@ -29,3 +29,10 @@ function wallpaper ()
 	ln -s `pwd`/$1 ~/.wallpaper
 	feh --bg-fill ~/.wallpaper
 }
+
+function update ()
+{
+	sudo apt-get update
+	sudo apt-get dist-upgrade
+}
+
