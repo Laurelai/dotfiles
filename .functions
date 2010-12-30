@@ -30,9 +30,14 @@ function wallpaper ()
 	feh --bg-fill ~/.wallpaper
 }
 
-function update ()
+function apt-update ()
 {
 	sudo apt-get update
 	sudo apt-get $1 dist-upgrade
 }
 
+function apt-clean ()
+{
+	sudo apt-get autoremove
+	sudo apt-get autoclean
+}
