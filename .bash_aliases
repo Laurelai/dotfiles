@@ -10,8 +10,6 @@ alias recent='twidge lsrecent'
 alias tweets='watch -n 10 twidge lsrecent'
 # network
 alias show-est-osx="sudo lsof -iTCP -sTCP:ESTABLISHED | awk '{print $1}' | sort -u"
-alias show-est="sudo netstat -npt4 | grep ESTABLISHED"
-alias show-listen='sudo netstat -nptl4 | grep -v 127.0.0.1'
 # NOTE: pass options to head
 alias apt-random='apt-cache search . | rl | head'
 alias apt-fortune='apt-random -1'

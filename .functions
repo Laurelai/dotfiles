@@ -41,3 +41,13 @@ function apt-clean ()
 	sudo apt-get -y autoremove
 	sudo apt-get -y autoclean
 }
+
+function show-est ()
+{
+	sudo netstat -npt4 | grep ESTABLISHED
+}
+
+function show-listen ()
+{
+	sudo netstat -nptl4 | grep -v 127.0.0.1
+}
