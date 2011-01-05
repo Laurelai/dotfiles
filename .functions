@@ -20,7 +20,7 @@ function tgz ()
 
 function tgzd ()
 {
-	tar -czvf `basename $1`.`date +%F`.tgz $1
+	tar -czvf `basename $1`.`date +%F_%T`.tgz $1
 }
 
 function wallpaper ()
