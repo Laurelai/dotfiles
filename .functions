@@ -13,6 +13,11 @@ function browse-tmp ()
 	/usr/bin/chromium-browser --temp-profile &
 }
 
+function browse-profile ()
+{
+	/opt/google/chrome/google-chrome --user-data-dir=`zenity --entry --text="Enter a profile name:"`
+}
+
 function tgz ()
 {
 	tar -czvf `basename $1`.tgz $1
