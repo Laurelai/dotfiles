@@ -28,6 +28,14 @@ function tgzd ()
 	tar -czvf `basename $1`.`date +"%F_%H-%M-%S"`.tgz $1
 }
 
+function gpgzd ()
+{
+	NAME=`basename $1`.`date +"%F_%H-%M-%S"`.tgz
+	tar -czvf $NAME $1
+	gpg -c $NAME
+	rm -f $NAME
+}
+
 function wallpaper ()
 {
 	rm -f ~/.wallpaper
