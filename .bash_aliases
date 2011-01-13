@@ -15,6 +15,8 @@ alias apt-random='apt-cache search . | rl | head'
 alias apt-fortune='apt-random -1'
 alias push='pushd'
 alias pop='popd'
+alias pd='pushd'
+alias pd='popd'
 alias lsd='dirs'
 # NOTE: conflicts with using default windows
 #alias screen='/usr/bin/byobu'
