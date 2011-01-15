@@ -57,10 +57,10 @@ function apt-clean ()
 
 function show-est ()
 {
-	sudo netstat -npt4 | grep ESTABLISHED
+	sudo netstat -npt4e | grep ESTABLISHED
 }
 
 function show-listen ()
 {
-	sudo netstat -nptl4 | grep -v 127.0.0.1
+	sudo netstat -npt4l | grep -v 127.0.0.1
 }
