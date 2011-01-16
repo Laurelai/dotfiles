@@ -64,3 +64,8 @@ function show-listen ()
 {
 	sudo netstat -npt4l | grep -v 127.0.0.1
 }
+
+function randip ()
+{
+	perl -e 'printf join ".", map int rand 256, 1 .. 4; printf("\n");'
+}
