@@ -49,6 +49,13 @@ function apt-update ()
 	sudo apt-get $1 dist-upgrade
 }
 
+function upgrade ()
+{
+	sudo apt-get update
+	sudo apt-get -y dist-upgrade
+	exit
+}
+
 function apt-clean ()
 {
 	sudo apt-get -y autoremove
