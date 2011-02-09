@@ -43,23 +43,16 @@ function wallpaper ()
 	feh --bg-fill ~/.wallpaper
 }
 
-function apt-update ()
-{
-	sudo apt-get update
-	sudo apt-get $1 dist-upgrade
-}
-
 function upgrade ()
 {
-	sudo apt-get update
-	sudo apt-get -y dist-upgrade
-	exit
+        sudo apt-get update
+        sudo apt-get $1 upgrade
 }
 
-function apt-clean ()
+function clean ()
 {
-	sudo apt-get -y autoremove
-	sudo apt-get -y autoclean
+        sudo apt-get -y autoremove
+        sudo apt-get -y autoclean
 }
 
 function show-est ()
