@@ -70,3 +70,13 @@ function randip ()
 {
 	perl -e 'printf join ".", map int rand 256, 1 .. 4; printf("\n");'
 }
+
+function cpaste ()
+{
+	gpg -o - -a -c $1 | curl -s -F 'sprunge=<-' http://sprunge.us
+}
+
+function dpaste ()
+{
+	curl -s $1 | gpg -o - -d
+}
