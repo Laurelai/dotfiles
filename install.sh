@@ -3,10 +3,10 @@
 echo "checking for requirements"
 if [ ! -f `which git` ] && [ ! -f `which curl` ]
 then
-	if [ -x /usr/bin/apt-get ]
+	if [ -x /usr/bin/yum ]
 	then
 		echo "installing requiements..."
-		sudo apt-get install git-core curl
+		sudo yum install git-core curl
 	else
 		echo "could not install pre-requisites, please install them manually"
 		echo "required: git curl"
