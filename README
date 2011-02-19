@@ -1,3 +1,3 @@
 about: my dotfiles
 WARNING: INSTALLATION IS A DESTRUCTIVE OPERATION THIS IS YOUR ONLY WARNING
-install: curl https://github.com/rrm/dotfiles/raw/master/install.sh | /bin/sh
+install: curl https://github.com/Laurelai/dotfiles/raw/master/install.sh | /bin/sh
