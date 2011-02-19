@@ -24,7 +24,7 @@ then
 else
 	echo "retrieving dotfiles..."
 	cd ~
-	git clone git://github.com/rrm/dotfiles.git .dotfiles
+	git clone git://github.com/Laurelai/dotfiles.git .dotfiles
 fi
 
 echo "creating config directory..."

@@ -1,0 +1,4 @@
+
+# extract apple isight firmware at boot
+/usr/bin/ift-extract -a /root/AppleUSBVideoSupport
+
