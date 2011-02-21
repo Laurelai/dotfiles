@@ -1,6 +1,7 @@
 # directory listing
 alias ll='ls -l'
 alias la='ls -A'
+alias lla='ls -la'
 alias l='ls -CF'
 # ssh aliases
 alias assh='ssh -A'
