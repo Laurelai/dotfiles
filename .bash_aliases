@@ -29,3 +29,4 @@ alias emacs='emacs -nw'
 alias js='rlwrap nodejs-repl'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias bgd='bg && disown'
+alias ipaddress='curl -s http://checkip.dyndns.org/ | grep -o "[[:digit:].]\+"'
