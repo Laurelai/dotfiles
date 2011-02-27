@@ -1,0 +1,2 @@
+# openbsd package path for 4.8
+export PKG_PATH=ftp://ftp5.usa.openbsd.org/pub/OpenBSD/4.8/packages/`machine -a`/
