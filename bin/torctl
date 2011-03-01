@@ -12,6 +12,19 @@ external ()
 	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 }
 
+flush ()
+{
+	iptables -F
+	iptables -X
+	iptables -t nat -F
+	iptables -t nat -X
+	iptables -t mangle -F
+	iptables -t mangle -X
+	iptables -P INPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	iptables -P OUTPUT ACCEPT
+}
+
 if [ -z $1 ]
 then
 	usage
@@ -67,7 +80,7 @@ then
 	echo "tor enabled"
 elif [ $1 = "stop" ]
 then
-	iptables --flush
+	flush
 	cp /etc/resolv.conf.orig /etc/resolv.conf
 	/etc/init.d/tor stop
 	external
