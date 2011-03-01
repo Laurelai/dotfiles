@@ -15,6 +15,7 @@ TORRC=/etc/tor/torrc
 if [ $1 = "install" ]
 then
 	echo "installing tor..."
+	apt-get update
 	apt-get -y install tor
 	echo "configuring torrc..."
 	echo "AutomapHostsOnResolve 1" >> $TORRC 
