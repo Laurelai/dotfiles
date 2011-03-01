@@ -89,7 +89,7 @@ export EDITOR=vi
 export JAVA_HOME=/usr
 set -o vi
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/.dotfiles/bin
 
 if [ -f ~/.ssh-agent-cred ]; then
 	. ~/.ssh-agent-cred
