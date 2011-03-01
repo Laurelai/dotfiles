@@ -38,3 +38,4 @@ iptables -A OUTPUT -m owner --uid-owner $TOR_UID -j ACCEPT
 iptables -A OUTPUT -j REJECT
 
 # XXX: disable (iptables --flush) option here
+# XXX: fix resolv.conf
