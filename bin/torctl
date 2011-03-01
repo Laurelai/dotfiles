@@ -2,7 +2,7 @@
 
 usage ()
 {
-	echo "usage: <install|enable|disable> [ip exceptions]"
+	echo "usage: <install|start|stop> [ip exceptions]"
 	exit
 }
 
@@ -23,7 +23,7 @@ then
 	echo "DNSPort 53" >> $TORRC
 	echo "restarting tor..."
 	/etc/init.d/tor restart
-elif [ $1 = "enable" ]
+elif [ $1 = "start" ]
 then
 	# destinations you don't want routed through Tor, space seperated list
 	NON_TOR=`ifconfig | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}' | xargs echo`
@@ -58,7 +58,7 @@ then
 
 	echo -n "external ip: "
 	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
-elif [ $1 = "disable" ]
+elif [ $1 = "stop" ]
 then
 	iptables --flush
 	cp /etc/resolv.conf.orig /etc/resolv.conf
