@@ -6,6 +6,12 @@ usage ()
 	exit
 }
 
+external ()
+{
+	echo -n "external ip: "
+	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+}
+
 if [ -z $1 ]
 then
 	usage
@@ -56,12 +62,14 @@ then
 	iptables -A OUTPUT -m owner --uid-owner $TOR_UID -j ACCEPT
 	iptables -A OUTPUT -j REJECT
 
-	echo -n "external ip: "
-	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+	external
+	echo "tor enabled"
 elif [ $1 = "stop" ]
 then
 	iptables --flush
 	cp /etc/resolv.conf.orig /etc/resolv.conf
+	external
+	echo "tor disabled"
 else
 	usage
 fi
