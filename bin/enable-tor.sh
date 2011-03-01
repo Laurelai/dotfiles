@@ -8,7 +8,7 @@ echo "TransPort 9040"
 echo "DNSPort 53"
 #XXX: restart tor
 
-# destinations you don't want routed through Tor
+# destinations you don't want routed through Tor, space seperated list
 # XXX: this becomes a comand line option
 NON_TOR="10.0.0.0/24"
 
