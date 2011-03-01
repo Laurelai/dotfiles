@@ -27,7 +27,7 @@ elif [ $1 = "enable" ]
 then
 	# destinations you don't want routed through Tor, space seperated list
 	NON_TOR=`ifconfig | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}' | xargs echo`
-	NON_TOR="$NON_TOR $*"
+	NON_TOR="$NON_TOR $2"
 	echo "exceptions are: $NON_TOR"
 
 	# the UID Tor runs as
