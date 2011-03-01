@@ -55,6 +55,9 @@ then
 	done
 	iptables -A OUTPUT -m owner --uid-owner $TOR_UID -j ACCEPT
 	iptables -A OUTPUT -j REJECT
+
+	echo -n "external ip: "
+	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 elif [ $1 = "disable" ]
 then
 	iptables --flush
