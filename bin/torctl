@@ -44,6 +44,7 @@ then
 
 	cp /etc/resolv.conf /etc/resolv.conf.orig
 	echo "nameserver 127.0.0.1" > /etc/resolv.conf
+	/etc/init.d/tor start
 
 	iptables -F
 	iptables -t nat -F
@@ -68,6 +69,7 @@ elif [ $1 = "stop" ]
 then
 	iptables --flush
 	cp /etc/resolv.conf.orig /etc/resolv.conf
+	/etc/init.d/tor stop
 	external
 	echo "tor disabled"
 else
