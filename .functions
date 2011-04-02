@@ -1,46 +1,51 @@
+function urlencode ()
+{
+	perl -MURI::Escape -ne "\$/=\"\"; print uri_escape \$_"
+}
+
 function 4get ()
 {
-curl $1 | grep -i "File<a href" | awk -F '<a href="' '{print $4}' | awk -F '" ' '{print $1}' | xargs wget
+	curl $1 | grep -i "File<a href" | awk -F '<a href="' '{print $4}' | awk -F '" ' '{print $1}' | xargs wget
 }
 
 function browse ()
 {
-/usr/bin/chromium-browser --user-data-dir=$HOME/.config/chromium/$1 &
+	/usr/bin/chromium-browser --user-data-dir=$HOME/.config/chromium/$1 &
 }
 
 function browse-tmp ()
 {
-/usr/bin/chromium-browser --temp-profile &
+	/usr/bin/chromium-browser --temp-profile &
 }
 
 function browse-profile ()
 {
-/opt/google/chrome/google-chrome --user-data-dir=$HOME/.config/google-chrome/`zenity --entry --text="Enter a profile name:"`
+	/opt/google/chrome/google-chrome --user-data-dir=$HOME/.config/google-chrome/`zenity --entry --text="Enter a profile name:"`
 }
 
 function tgz ()
 {
-tar -czvf `basename $1`.tgz $1
+	tar -czvf `basename $1`.tgz $1
 }
 
 function tgzd ()
 {
-tar -czvf `basename $1`.`date +"%F_%H-%M-%S"`.tgz $1
+	tar -czvf `basename $1`.`date +"%F_%H-%M-%S"`.tgz $1
 }
 
 function gpgzd ()
 {
-NAME=`basename $1`.`date +"%F_%H-%M-%S"`.tgz
-tar -czvf $NAME $1
-gpg -c $NAME
-rm -f $NAME
+	NAME=`basename $1`.`date +"%F_%H-%M-%S"`.tgz
+	tar -czvf $NAME $1
+	gpg -c $NAME
+	rm -f $NAME
 }
 
 function wallpaper ()
 {
-rm -f ~/.wallpaper
-ln -s `pwd`/$1 ~/.wallpaper
-feh --bg-fill ~/.wallpaper
+	rm -f ~/.wallpaper
+	ln -s `pwd`/$1 ~/.wallpaper
+	feh --bg-fill ~/.wallpaper
 }
 
 function clean ()
@@ -53,32 +58,32 @@ function upgrade ()
 {
         sudo apt-get update
         sudo apt-get $1 upgrade
-clean
+	clean
 }
 
 function show-est ()
 {
-sudo netstat -npt4e | grep ESTABLISHED
+	sudo netstat -napt4e | grep ESTABLISHED
 }
 
 function show-listen ()
 {
-sudo netstat -npt4l | grep -v 127.0.0.1
+	sudo netstat -napt4l | grep -v 127.0.0.1
 }
 
 function randip ()
 {
-perl -e 'printf join ".", map int rand 256, 1 .. 4; printf("\n");'
+	perl -e 'printf join ".", map int rand 256, 1 .. 4; printf("\n");'
 }
 
 function cpaste ()
 {
-gpg -o - -a -c $1 | curl -s -F 'sprunge=<-' http://sprunge.us
+	gpg -o - -a -c $1 | curl -s -F 'sprunge=<-' http://sprunge.us
 }
 
 function dpaste ()
 {
-curl -s $1 | gpg -o - -d
+	curl -s $1 | gpg -o - -d
 }
 
 # build a self installing archive using shar
@@ -99,19 +104,57 @@ function make-installer ()
 # does not require sharutils
 function make-portable-installer ()
 {
-shar -QVx $1 > $1.sh
-egrep -v "^#|^exit 0" $1.sh > $1.1.sh
-echo "#!/bin/sh" > $1.sh
-cat $1.1.sh >> $1.sh
-echo "cd $1 && chmod -R 755 . && ./$2" >> $1.sh
-echo "exit 0" >> $1.sh
-rm -f $1.1.sh
-chmod 755 $1.sh
+		shar -QVx $1 > $1.sh
+		egrep -v "^#|^exit 0" $1.sh > $1.1.sh
+		echo "#!/bin/sh" > $1.sh
+		cat $1.1.sh >> $1.sh
+		echo "cd $1 && chmod -R 755 . && ./$2" >> $1.sh
+		echo "exit 0" >> $1.sh
+		rm -f $1.1.sh
+		chmod 755 $1.sh
 }
 
 # search commandlinefu.com
 function fu ()
 {
-curl -s http://www.commandlinefu.com/commands/matching/$1/`echo -n $1 | base64`/plaintext
+	base64=`echo -n "$1" | base64`
+	encoded=`echo -n "$1" | urlencode`
+	curl -s "http://www.commandlinefu.com/commands/matching/$encoded/$base64/plaintext"
 }
 
+# commandlinefu roulette
+function fur ()
+{
+	curl -sL 'http://www.commandlinefu.com/commands/random/plaintext' | grep -v "^# commandlinefu"
+}
+
+function which-pkg()
+{
+	dpkg -S $(which $1) 
+}
+
+function ssync()
+{
+	rsync --delete -avz $2 $1@$1.strongspace.com:/strongspace/$1/$3
+}
+
+function sscp()
+{
+	scp $2 $1@$1.strongspace.com:/strongspace/$1/$3 
+}
+
+function smount()
+{
+	sshfs $1@$1.strongspace.com:/strongspace/$1/$2 $3
+}
+
+function external()
+{
+        wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+}
+
+#map-files /lib *.so ls -la
+function map-files()
+{
+	find $1 -name $2 -exec ${@:3} {} \;
+}
