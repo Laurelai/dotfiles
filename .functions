@@ -56,9 +56,8 @@ function clean ()
 
 function upgrade ()
 {
-        sudo apt-get update
-        sudo apt-get $1 upgrade
-	clean
+        sudo yum -y update
+ 
 }
 
 function show-est ()
