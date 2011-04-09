@@ -63,7 +63,7 @@ then
 	iptables -t nat -F
 
 	iptables -t nat -A OUTPUT -m owner --uid-owner $TOR_UID -j RETURN
-	for NET in $NON_TOR 127.0.0.0/9 127.128.0.0/10; do
+	for NET in $NON_TOR 127.0.0.0/9 127.128.0.0/10 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16; do
 		iptables -t nat -A OUTPUT -d $NET -j RETURN
 	done
 	iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to-ports 53
