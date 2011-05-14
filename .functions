@@ -33,11 +33,19 @@ function tgzd ()
 	tar -czvf `basename $1`.`date +"%F_%H-%M-%S"`.tgz $1
 }
 
-function gpgzd ()
+function tgze ()
+{
+	NAME=`basename $1`.tgz
+	tar -czvf $NAME $1
+	gpg -a -c $NAME
+	rm -f $NAME
+}
+
+function tgzde ()
 {
 	NAME=`basename $1`.`date +"%F_%H-%M-%S"`.tgz
 	tar -czvf $NAME $1
-	gpg -c $NAME
+	gpg -a -c $NAME
 	rm -f $NAME
 }
 
