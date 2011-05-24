@@ -165,3 +165,8 @@ function map-files()
 {
 	find $1 -name $2 -exec ${@:3} {} \;
 }
+
+function rename-user()
+{
+	usermod $1 -l $2 -m -d /home/$2
+}
