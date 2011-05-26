@@ -178,10 +178,17 @@ function rename-user()
 	usermod $1 -l $2 -m -d /home/$2
 }
 
-function sec-report()
+function check-rootkits()
 {
 	sudo rkhunter --update
 	sudo rkhunter --check
 	sudo chkrootkit
+}
+
+function sec-report()
+{
+	check-rootkits
+	show-est
+	show-listen
 	show-hidden
 }
