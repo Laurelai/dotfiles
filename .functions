@@ -79,6 +79,12 @@ function show-listen ()
 	sudo netstat -napt4l | grep -v 127.0.0.1
 }
 
+function show-hidden ()
+{
+	sudo unhide-tcp
+	sudo unhide brute
+}
+
 function randip ()
 {
 	perl -e 'printf join ".", map int rand 256, 1 .. 4; printf("\n");'
@@ -170,4 +176,12 @@ function map()
 function rename-user()
 {
 	usermod $1 -l $2 -m -d /home/$2
+}
+
+function sec-report()
+{
+	sudo rkhunter --update
+	sudo rkhunter --check
+	sudo chkrootkit
+	show-hidden
 }
