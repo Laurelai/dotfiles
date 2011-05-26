@@ -181,7 +181,7 @@ function rename-user()
 function check-rootkits()
 {
 	sudo rkhunter --update
-	sudo rkhunter --check
+	sudo rkhunter --cronjob --display-logfile --pkgmgr dpkg 
 	sudo chkrootkit
 }
 
