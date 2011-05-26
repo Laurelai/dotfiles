@@ -180,6 +180,7 @@ function rename-user()
 
 function check-rootkits()
 {
+	sudo apt-get install -y rkhunter chkrootkit unhide
 	sudo rkhunter --update
 	sudo rkhunter --cronjob --display-logfile --pkgmgr dpkg 
 	sudo chkrootkit
