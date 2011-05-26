@@ -192,3 +192,8 @@ function sec-report()
 	show-listen
 	show-hidden
 }
+
+function check-md5()
+{
+	cd  / && cat /var/lib/dpkg/info/*.md5sums | md5sum  -c -
+}
