@@ -76,7 +76,7 @@ function show-est ()
 
 function show-listen ()
 {
-	sudo netstat -napt4l | grep -v 127.0.0.1
+	sudo netstat -naptl | grep LISTEN 
 }
 
 function show-hidden ()
