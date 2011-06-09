@@ -162,7 +162,7 @@ function external()
 }
 
 #map-files /lib *.so ls -la
-function map-files()
+function map()
 {
 	find $1 -name $2 -exec ${@:3} {} \;
 }
