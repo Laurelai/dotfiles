@@ -9,7 +9,7 @@ usage ()
 external ()
 {
 	echo -n "external ip: "
-	wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+	curl -s http://icanhazip.com
 }
 
 flush ()
