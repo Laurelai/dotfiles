@@ -5,4 +5,4 @@ sudo add-apt-repository ppa:chromium-daily/dev
 sudo add-apt-repository ppa:chromium-daily/ppa
 # install supporting packages
 sudo apt-get update
-sudo apt-get install moonlight-plugin-chromium chromium-codecs-ffmpeg-nonfree ubuntu-restricted-*
+sudo apt-get install moonlight-plugin-chromium chromium-codecs-ffmpeg-nonfree ubuntu-restricted-* flashplugin-installer
