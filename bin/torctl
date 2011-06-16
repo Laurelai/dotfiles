@@ -40,6 +40,10 @@ then
 	echo "AutomapHostsOnResolve 1" >> $TORRC 
 	echo "TransPort 9040" >> $TORRC
 	echo "DNSPort 53" >> $TORRC
+	echo "CircuitBuildTimeout 5" >> $TORRC
+	echo "KeepalivePeriod 60" >> $TORRC
+	echo "NewCircuitPeriod 15" >> $TORRC
+	echo "NumEntryGuards 8" >> $TORRC
 	echo "restarting tor..."
 	/etc/init.d/tor restart
 elif [ $1 = "start" ]
